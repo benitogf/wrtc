@@ -1,0 +1,9 @@
+{
+ "host": "host",
+ "port": "9000",
+ "title": "title",
+ "author": "author",
+ "enviroment": "dev",
+ "gapi": "gapi",
+ "ganalytics": "ganalytics"
+}

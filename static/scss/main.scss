@@ -1,0 +1,90 @@
+@mixin meyer-reset {
+  html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+  // HTML5 display-role reset for older browsers
+  article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+  body {
+    line-height: 1;
+  }
+  ol, ul {
+    list-style: none;
+  }
+  blockquote, q {
+    quotes: none;
+  }
+  blockquote {
+    &:before, &:after {
+      content: "";
+      content: none;
+    }
+  }
+  q {
+    &:before, &:after {
+      content: "";
+      content: none;
+    }
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+}
+
+@include meyer-reset;
+
+/* Custom CSS
+ * --------------------------------------- */
+body{
+  font-family: 'Gudea', sans-serif;
+	color: rgba(0,0,0,0.5);
+}
+#content {
+  transition: 1s all cubic-bezier(0.47,0,0.74,0.71) 1s;
+}
+#hula {
+  display:none;
+}
+#localVideo {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+#analyser {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+#peer{
+  position: relative;
+  z-index: 1;
+}
+#outgoing {
+  width: 600px;
+  word-wrap: break-word;
+}
+#clients {
+  margin: 0 auto;
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.0);
+  color: white;
+}
+#clients li {
+  line-height: 2em;
+  text-align: center;
+  background-color: rgba(23, 183, 143, 0.62);
+  margin: 1em;
+}
+#clients li:hover{
+  background-color: rgba(23, 183, 143, 0.9);
+}

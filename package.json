@@ -1,0 +1,28 @@
+{
+  "name": "wrtc",
+  "version": "1.0.0",
+  "description": "wrtc",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify ./front/front.js | uglifyjs >  ./static/js/front.min.js",
+    "watch": "watchify ./front/front.js -d -o ./static/js/front.bundle.js",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^10.2.4",
+    "uglifyjs": "^2.4.10",
+    "watchify": "^3.2.2"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "express-compile-sass": "^3.0.4",
+    "jade": "^1.11.0",
+    "jquery": "^2.1.4",
+    "simple-peer": "^5.11.5",
+    "promise-user-media": "^1.0.0",
+    "socket.io-client": "1.3.6",
+    "socket.io": "1.3.6"
+  }
+}

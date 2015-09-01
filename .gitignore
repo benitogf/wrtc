@@ -1,0 +1,5 @@
+node_modules
+conf.json
+static/components/*
+static/js/*
+!.gitkeep
